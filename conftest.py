@@ -10,4 +10,4 @@ def dead_player():
 
 @pytest.fixture
 def game():
-    return {"score": 0, "multiplier": 1, "active": True}
+    return {"score": 0, "multiplier": 1, "active": True}    # score starts at 0, multiplier starts at 1, and game is active (added day 3)
