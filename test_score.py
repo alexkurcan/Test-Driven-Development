@@ -33,7 +33,7 @@ def test_reset_score(game):
 def test_is_high_score(game):
     # Set the score to 100
     game["score"] = 100
-    assert is_high_score(game, 50) == True     # Score of 100 should be considered higher than threshold 50
+    assert is_high_score(game, 50) == True    # Score of 100 should be considered higher than threshold 50
 
 
 def test_is_high_score_invalid(game):

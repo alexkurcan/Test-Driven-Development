@@ -2,16 +2,16 @@ def add_points(game, amount):
     # Do not allow zero or negative point additions
     if amount <= 0:
         raise ValueError
-    if not game["active"]:     # If the game is not active, do not modify anything
+    if not game["active"]:                          # If the game is not active, do not modify anything
         return game
-    game["score"] += amount * game["multiplier"]     # Add points multiplied by the current multiplier
+    game["score"] += amount * game["multiplier"]    # Add points multiplied by the current multiplier
     return game
 
 def apply_multiplier(game, multiplier):
     # Multiplier must be at least 1
     if multiplier < 1:
         raise ValueError
-    if not game["active"]:     # If the game is not active, do not modify anything
+    if not game["active"]:               # If the game is not active, do not modify anything
         return game
     game["multiplier"] = multiplier      # Set the new multiplier
     return game
