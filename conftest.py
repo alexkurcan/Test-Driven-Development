@@ -12,6 +12,12 @@ def dead_player():
 def game():
     return {"score": 0, "multiplier": 1, "active": True}    # score starts at 0, multiplier starts at 1, and game is active (added day 3)
 
+import pytest
+
+@pytest.fixture
+def inventory():
+    return {"items": ["sword"], "capacity": 10, "locked": False} # unlocked inventory
+
 @pytest.fixture
 def locked_inventory():
-    return {"items": ["sword"], "capacity": 10, "locked": True} # used in tests where the inventory should not allow changes (added day 4)
+    return {"items": ["sword"], "capacity": 10, "locked": True} # locked inventory (both added on day 4)
