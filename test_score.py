@@ -27,13 +27,15 @@ def test_apply_multiplier_invalid(game):
 def test_reset_score(game):
     # set score to a non-zero value
     game["score"] = 500
-    assert reset_score(game)["score"] == 0     # resetting the score should set it back to 0
+    # resetting the score should set it back to 0
+    assert reset_score(game)["score"] == 0
 
 
 def test_is_high_score(game):
     # set the score to 100
     game["score"] = 100
-    assert is_high_score(game, 50) == True    # score of 100 should be considered higher than threshold 50
+    # score of 100 should be higher than threshold 50
+    assert is_high_score(game, 50) is True
 
 
 def test_is_high_score_invalid(game):
